@@ -1,0 +1,5 @@
+opencv-python==4.9.0.80
+scikit-learn==1.4.0
+pandas==2.1.4
+numpy==1.26.3
+djitellopy==2.5.0
