@@ -19,7 +19,7 @@ def connect_drone() -> Tello:
 def preprocess_image(img: np.ndarray) -> np.ndarray:
     """Preprocess the image for model prediction."""
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    img_resized = cv2.resize(img_rgb, (80, 80)) / 255.0
+    img_resized = cv2.resize(img_rgb, (20, 20)) / 255.0
     img_resized = np.asarray(img_resized * 255, dtype=np.uint8)
     img_gray = cv2.cvtColor(img_resized, cv2.COLOR_RGB2GRAY)
     return img_gray.flatten()[np.newaxis, :]
@@ -46,7 +46,7 @@ def display_prediction_status(color_state: tuple, text: str):
     cv2.imshow(window_name, status_img)
 
 def main():
-    model = load_model('model.pkl')
+    model = load_model('model_splitted-82.79+73.88.pkl')
     tello = connect_drone()
     color_state = (0, 255, 0)
     status_text = "SAFE"
@@ -54,7 +54,6 @@ def main():
     confidence = 0
     try:
         while True:
-            #(omitted some code)
             img = tello.get_frame_read().frame
             img_preprocessed = preprocess_image(img)
 
