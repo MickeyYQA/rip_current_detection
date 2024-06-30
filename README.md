@@ -35,10 +35,13 @@ This project implements a rip current detection system using the Tello drone and
 
 ## Dataset Preparation
 1. Collect and save images of near-shore conditions, including both rip currents and non-rip currents.
-2. Use the provided script to preprocess and convert images to a CSV file. See: grayingAndSizing.py and createCSV.py
+2. Use the provided script to preprocess, augment, and convert images to a CSV file.
+_See: data-augmentation.py and createCSV.py_
 
 ## Model Training
-Load the dataset from the CSV file and train the model. See: rip-model-train.py
+Load the dataset from the CSV file and train the model. 
+_See: rip-model-train.py_
 
 ## Real-time Detection
-Implement the real-time detection system with the Tello drone. See: rip-detect.py
+Implement the real-time detection system with the Tello drone. 
+_See: rip-detect.py_
