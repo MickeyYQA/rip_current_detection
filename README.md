@@ -7,8 +7,8 @@ This project implements a rip current detection system using the Tello drone and
 ## Features
 - **Real-time Image Transmission**: Establishes UDP communication to stream live video feed from the Tello drone's camera to the computer.
 - **Image Preprocessing**: Uses OpenCV to resize the received images to 10x10 pixels and convert them to grayscale, ensuring consistency with the training data.
-- **ANN Model for Rip Current Detection**: Utilizes a Multi-Layer Perceptron (MLP) Classifier from the Scikit-Learn library, configured with one hidden layer of 60 neurons, achieving an overall accuracy of 90.4977%.
-- **Enhanced Accuracy Mechanism**: Predicts using the model 100 times per image and confirms the presence of a rip current if over 82% of the predictions indicate a rip current, improving the reliability of the detection.
+- **ANN Model for Rip Current Detection**: Utilizes a Multi-Layer Perceptron (MLP) Classifier from the Scikit-Learn library, configured with one hidden layer of 60 neurons, achieving a testing accuracy of 73.9%, and an accuracy of 92.5% after a confidence threshold is being properly added.
+- **Enhanced Accuracy Mechanism**: Predicts using the model 100 times per image and confirms the presence of a rip current if over 69% of the predictions indicate a rip current, improving the reliability of the detection.
 - **Visual Result Display**: Displays detection results in a window, showing "RIP CURRENT" with a red background if a rip current is detected and "SAFE" with a green background if no rip current is detected.
 
 
